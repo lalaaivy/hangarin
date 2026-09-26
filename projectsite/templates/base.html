@@ -104,7 +104,7 @@
 							</ul>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="{% static 'img/profile.jpg' %}" alt="user-img" width="36" class="img-circle> <span >Hizrian</span></span> </a>
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="{% static 'img/profile.jpg' %}" alt="user-img" width="36" class="img-circle"> <span>Hizrian</span></span> </a>
 							<ul class="dropdown-menu dropdown-user">
 								<li>
 									<div class="user-box">
@@ -123,7 +123,6 @@
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Logout</a>
 								</ul>
-								<!-- /.dropdown-user -->
 							</li>
 						</ul>
 					</div>
@@ -174,7 +173,7 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<a href="components.html">
+							<a href="{% url 'task-list' %}">
 								<i class="la la-table"></i>
                                 <p>Task</p>
 							</a>
