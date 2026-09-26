@@ -35,7 +35,7 @@ class Note(BaseModel):
     note_content = models.TextField(max_length=200)
 
     def __str__(self):
-            return self.task_note
+            return self.task_note.task_name
 
 class SubTask(BaseModel):
     parent_task = models.ForeignKey(Task, on_delete=models.CASCADE)
