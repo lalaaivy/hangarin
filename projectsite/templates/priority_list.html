@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">List of Tasks</div>
+                        <div class="card-title">List of Priority</div>
                         <div class="card-category">Page Subtitle</div>
                     </div>
                     <br />
@@ -25,8 +25,8 @@
                         </div>
                         <div class="col-md-6">
                             <div class="pull-right">
-                                <a href="{% url 'task-add' %}" class="btn btn-success btn-rounded">Add
-                                    Task</a>
+                                <a href="{% url 'priority-add' %}" class="btn btn-success btn-rounded">Add
+                                    Priority</a>
                             </div>
                         </div>
                     </div>
@@ -34,25 +34,17 @@
                         <table class="table table-striped mt-3">
                             <thead>
                                 <tr>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Deadline</th>
                                     <th scope="col">Priority</th>
-                                    <th scope="col">Category</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {% for object in object_list %}
                                 <tr>
-                                    <td>{{ object.task_name}}</td>
-                                    <td>{{ object.task_status}}</td>
-                                    <td>{{ object.task_deadline}}</td>
-                                    <td>{{ object.task_priority}}</td>
-                                    <td>{{ object.task_category}}</td>
+                                    <td>{{ object.priority_name}}</td>
                                     <td>
-                                        <a href="task_list/{{ object.id }}">Edit</a>
-                                        <a href="task_list/{{ object.id }}/delete"
+                                        <a href="priority_list/{{ object.id }}">Edit</a>
+                                        <a href="priority_list/{{ object.id }}/delete"
                                             class="text-danger">Delete</a>
                                     </td>
                                 </tr>
