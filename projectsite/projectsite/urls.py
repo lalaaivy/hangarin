@@ -2,9 +2,11 @@ from django.contrib import admin
 from django.urls import path
 from hangarin.views import HomePageView, TaskListView, TaskCreateView, TaskUpdateView, TaskDeleteView, SubTaskListView, SubTaskCreateView, SubTaskUpdateView, SubTaskDeleteView, NoteListView, NoteUpdateView, NoteCreateView, NoteDeleteView, CategoryListView, CategoryCreateView, CategoryUpdateView, CategoryDeleteView, PriorityListView, PriorityCreateView, PriorityUpdateView, PriorityDeleteView
 from hangarin import views
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("accounts/", include("allauth.urls")), # allauth routes
     path('', views.HomePageView.as_view(), name='home'),
     path('task_list', TaskListView.as_view(), name='task-list'),
     path('task_list/add', TaskCreateView.as_view(), name='task-add'),
