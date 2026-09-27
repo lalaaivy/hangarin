@@ -49,10 +49,10 @@ INSTALLED_APPS = [
     "widget_tweaks",
 ]
 
-if "pythonanywhere" in socket.gethostname():
-    SITE_ID = 5 # production site (psusphere.pythonanywhere.com)
+if os.environ.get('PYTHONANYWHERE_SITE'):
+    SITE_ID = 7 # production site
 else:
-    SITE_ID = 4 # local site (127.0.0.1:8000)
+    SITE_ID = 6 # local site (127.0.0.1:8000)
 
 AUTHENTICATION_BACKENDS = [
  'django.contrib.auth.backends.ModelBackend',
